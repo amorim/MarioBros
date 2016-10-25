@@ -1,18 +1,6 @@
 #include <allegro5/allegro_audio.h>
 #include <allegro5/allegro_acodec.h>
 
-#define URI_ThemeSong "/home/daniel/resources/sounds/themeSong1-1.ogg"
-#define URI_TelaInicialSong "/home/daniel/resources/sounds/menuSong.ogg"
-#define URI_JumpSound "/home/daniel/resources/sounds/jumpSound.ogg"
-#define URI_BreakBlockSound "/home/daniel/resources/sounds/breakBlockSound.ogg"
-#define URI_CoinSound "/home/daniel/resources/sounds/coinSound.ogg"
-#define URI_PauseSound "/home/daniel/resources/sounds/pauseSound.ogg"
-#define URI_StompSound "/home/daniel/resources/sounds/stomp.ogg"
-#define URI_DEATH_SOUND "/home/daniel/resources/sounds/mariodie.ogg"
-#define URI_TroSound "/home/daniel/resources/sounds/tro.ogg"
-#define URI_OneUpSound "/home/daniel/resources/sounds/oneup.ogg"
-#define URI_GameOverSound "/home/daniel/resources/sounds/gameOverSound.ogg"
-#define URI_PowerUp "/home/daniel/resources/sounds/powerup.ogg"
 ALLEGRO_SAMPLE *musicaDeFundo = NULL;
 ALLEGRO_SAMPLE *musicaMenu = NULL;
 ALLEGRO_SAMPLE *jumpSong = NULL;
