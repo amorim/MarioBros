@@ -1,6 +1,4 @@
-#define URI_BRICK "/home/daniel/resources/Sprites/Misc/Tileset/brickMarrom.png"
-
-void newBrick(Bloco* s, posi pos, int tipo) { //precisa inicializar a img do Bloco* antes de passa-lo pra funçao
+void newBrick(Bloco* s, posi pos, int tipo) {
     s->s.img = al_load_bitmap(URI_BRICK);
     s->s.pos = pos;
     s->s.bound.x = 16;
