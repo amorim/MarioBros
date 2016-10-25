@@ -1,4 +1,4 @@
-﻿//variaveis da Camera
+//variaveis da Camera
  float cameraPosition[2] = { 0, 0 };//CAMERA
  ALLEGRO_TRANSFORM camera;//CAMERA
 
@@ -12,7 +12,7 @@ void CameraUpdate(float *cameraPosition, float x, float y, int tamanhoJogador, i
     else  if(cameraPosition[0] > larguraTelaInteira)
         cameraPosition[0] = larguraTelaInteira;
 
-    //posi��o y da camera
+    //posição y da camera
     if(cameraPosition[1] < 0)
         cameraPosition[1] = 0;
 }
