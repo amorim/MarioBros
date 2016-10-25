@@ -5,11 +5,13 @@
 2. Informações Técnicas
 3. Instruções de Uso e Instalação
 
-1. SOBRE O JOGO
+
+SOBRE O JOGO
 
 Super Mario Bros é uma versão modernizada do jogo homônimo criado pela Nintendo em 1985. Através do uso da biblioteca gráfica Allegro, criamos um jogo que tenta ser fiel em relação aos recursos do jogo original, de forma que ainda cumpríssemos todos os requisitos solicitados.
 
-2. INFORMAÇÕES TÉCNICAS
+
+INFORMAÇÕES TÉCNICAS
 
 Nesta seção, detalharemos o funcionamento de cada um dos requisitos base do projeto.
  
@@ -25,20 +27,25 @@ O algoritmo de ordenação bubble sort foi utilizado para apresentar as 10 melho
 d) Backtracking
 O Backtracking foi a técnica utilizada para fazermos o efeito de volta no tempo. Utilizamos também uma pilha, para aumentar a eficiência desse algoritmo.
 
-3. INSTRUÇÕES DE USO E INSTALAÇÃO
+
+INSTRUÇÕES DE USO E INSTALAÇÃO
 
  INSTALANDO:
+ 
 Para rodar o jogo, é necessário ter instalado a biblioteca Allegro 5 instalada.
 	
 No Windows:
+
 	•	Link com o CodeBlocks (ide passível de se instalar o Allegro): http://www.codeblocks.org/downloads;
 	•	Link com um tutorial de como instalar o Allegro 5 na ide CodeBlocks: https://sites.google.com/a/liesenberg.biz/cjogos/home/software/ambiente-code-blocks-allegro-5
   
 No Linux:
+
 No Linux o Allegro deve ser instalado via ppa e o projeto deve ser compilado usando CMake:
 	•	Link para instalar via PPA: https://wiki.allegro.cc/index.php?title=Install_Allegro_from_Ubuntu_PPAs
   
 No MacOS:
+
 No MacOS, basta utilizar a aplicação "homebrew", conforme esse tutorial: https://wiki.allegro.cc/index.php?title=Installing_with_homebrew
 E seguir os mesmos passos que foram utilizados no linux, compilando via Cmake.
 
