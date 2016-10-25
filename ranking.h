@@ -1,6 +1,3 @@
-#define URI_Ranking "/home/daniel/resources/Sprites/Misc/ranking.txt"
-#define URI_TelaRanking "/home/daniel/resources/Sprites/Misc/TelaRanking.png"
-
 struct rank{
     char nome[16];
     int pontos, top;
