@@ -1,9 +1,3 @@
-//
-// Created by daniel on 22/10/16.
-//
-
-#define URI_GOOMBA "/home/daniel/resources/Sprites/Enemies/Goomba/Goomba.png"
-#define URI_MUSHROOM "/home/daniel/resources/Sprites/mushroom.png"
 const int frameDelayEnemy = 8;
 void newEnemy(Bloco* s, posi pos, int* id, int enemiesId[], int* qntdEnemies, int type){
     if (type == GOOMBA)
