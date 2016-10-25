@@ -170,6 +170,10 @@ int main(void) {
                 fase6();
             } else if (mariozinho.ultimoId == 6) {
                 fase7();
+            } else if (mariozinho.ultimoId == 7) {
+                fase8();
+            } else if (mariozinho.ultimoId == 8) {
+                fase9();
             }
             //region bloco resetar mario//
 
@@ -360,7 +364,7 @@ int main(void) {
                         al_draw_bitmap_region(marioImgVoltandoPequeno, 0.0, 0.0,
                                               al_get_bitmap_width(marioImgVoltandoPequeno), (float) mario.h, mario.pos.x,
                                               mario.pos.y - alturaPulo, 0);
-                    if (mario.pos.x >= 203 * 40 - mario.w) {
+                    if (mario.pos.x >= 205 * 40 - mario.w) {
                         gameState = SELECAO_LEVEL;
                         if(arvoreLevels[mariozinho.ultimoId].status != 2) {
                             FILE *arquivo;
