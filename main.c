@@ -40,7 +40,7 @@ enum{
 
 #include "ranking.h"
 #include "menu.h"
-#include "fase1.h"
+#include "fases.h"
 int main(void) {
     char moedas[20], timers[20], points[20];
     int FPS = 60, j;
