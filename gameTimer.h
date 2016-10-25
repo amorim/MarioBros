@@ -1,11 +1,3 @@
-//
-// Created by lucas on 22/10/16.
-//
-
-#ifndef DETECCAOCOLISAO_GAMETIMER_H
-#define DETECCAOCOLISAO_GAMETIMER_H
-
-#endif //DETECCAOCOLISAO_GAMETIMER_H
 void handleTimer(int tempo, Sprite* mario, bool* deathRise) {
     if (tempo == 120) {
         paraBgMusic();
