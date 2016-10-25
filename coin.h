@@ -1,5 +1,3 @@
-#define URI_COIN "/home/daniel/resources/Sprites/Misc/coin.png"
-
 const int frameDelayCoin = 15;
 int coinCount = 0, coinDisplay = 0;
 void newCoin(Bloco* s, posi pos, int* id, int coinsId[], int* qntdCoins){
@@ -54,4 +52,3 @@ bool handleCoinCollision(Sprite mario, Bloco* bloco, int* alturaPulo) {
     }
     return colidiu;
 }
-
