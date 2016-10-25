@@ -1,6 +1,6 @@
-#include <ctype.h>
-#include "startup.h"
+##include <ctype.h>
 #include "definitions.h"
+#include "startup.h"
 #include "sound.h"
 int pontuacaoAtual = 0;
 int qntdVidasAtuais = 3;
