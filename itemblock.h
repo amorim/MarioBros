@@ -1,9 +1,5 @@
-
-// Created by daniel on 23/10/16.
-//
 const int frameDelayItemBlock = 15;
-#define URI_QUESTION_BLOCK "/home/daniel/resources/Sprites/Misc/Special_Blocks/Block_Interrogation/blockInterrogationUnused.png"
-#define URI_SOLID_BLOCK "/home/daniel/resources/Sprites/solidblock.png"
+
 void newItemBlock(Bloco* s, posi pos, int* id, int itemsId[], int* qntdItems) {
     s->s.img = al_load_bitmap(URI_QUESTION_BLOCK);
     s->s.pos = pos;
