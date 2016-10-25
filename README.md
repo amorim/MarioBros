@@ -6,12 +6,12 @@
 3. Instruções de Uso e Instalação
 
 
-SOBRE O JOGO
+# SOBRE O JOGO
 
 Super Mario Bros é uma versão modernizada do jogo homônimo criado pela Nintendo em 1985. Através do uso da biblioteca gráfica Allegro, criamos um jogo que tenta ser fiel em relação aos recursos do jogo original, de forma que ainda cumpríssemos todos os requisitos solicitados.
 
 
-INFORMAÇÕES TÉCNICAS
+# INFORMAÇÕES TÉCNICAS
 
 Nesta seção, detalharemos o funcionamento de cada um dos requisitos base do projeto.
  
@@ -28,7 +28,7 @@ d) Backtracking
 O Backtracking foi a técnica utilizada para fazermos o efeito de volta no tempo. Utilizamos também uma pilha, para aumentar a eficiência desse algoritmo.
 
 
-INSTRUÇÕES DE USO E INSTALAÇÃO
+# INSTRUÇÕES DE USO E INSTALAÇÃO
 
  INSTALANDO:
  
@@ -42,11 +42,15 @@ No Windows:
 No Linux:
 
 No Linux o Allegro deve ser instalado via ppa e o projeto deve ser compilado usando CMake:
+
 	•	Link para instalar via PPA: https://wiki.allegro.cc/index.php?title=Install_Allegro_from_Ubuntu_PPAs
   
 No MacOS:
 
-No MacOS, basta utilizar a aplicação "homebrew", conforme esse tutorial: https://wiki.allegro.cc/index.php?title=Installing_with_homebrew
+No MacOS, basta utilizar a aplicação "homebrew", conforme esse tutorial: 
+
+	• https://wiki.allegro.cc/index.php?title=Installing_with_homebrew
+	
 E seguir os mesmos passos que foram utilizados no linux, compilando via Cmake.
 
 Pedimos que altere o CmakeLists.txt para apontar corretamente a localização das pastas include e lib do Allegro, estas pastas mudam conforme o sistema.
