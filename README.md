@@ -14,17 +14,21 @@ Super Mario Bros é uma versão modernizada do jogo homônimo criado pela Ninten
 # INFORMAÇÕES TÉCNICAS
 
 Nesta seção, detalharemos o funcionamento de cada um dos requisitos base do projeto.
- 
-a) Utilização de Árvore Binária
+
+### Utilização de Árvore Binária
+
 O jogo utiliza-se de uma árvore binária em seu seletor de fase, através de um arquivo, as informações de fases liberadas, passadas e bloqueadas são recuperadas sempre que o jogo é aberto. A utilização de uma árvore facilita no processo de navegação do mapa.
 
-b) Busca Binária Recursiva
+### Busca Binária Recursiva
+
 A busca binária foi utilizada para encontrar de maneira eficiente alguém específico do ranking.
 
-c) Bubble Sort
+### Bubble Sort
+
 O algoritmo de ordenação bubble sort foi utilizado para apresentar as 10 melhores pontuações, e também preparar a lista para a busca binária.
 
-d) Backtracking
+### Backtracking
+
 O Backtracking foi a técnica utilizada para fazermos o efeito de volta no tempo. Utilizamos também uma pilha, para aumentar a eficiência desse algoritmo.
 
 
