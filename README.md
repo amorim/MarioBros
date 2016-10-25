@@ -77,5 +77,4 @@ A pontuação é dada pela coleta de moedas e ações como destruir um Bloco de 
 
 A volta no tempo pode ser usada quando quiser, porém ela não volta a contagem de segundos que o Mario tem para chegar ao final da fase, portanto, utilize com cautela. Se o tempo acabar, voce automaticamente perde uma vida e seu progresso na fase.
 
-
-
+Para entrar no ranking, é necessário levar um game over e sua pontuação estar entre o TOP 100.
