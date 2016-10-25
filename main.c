@@ -250,7 +250,7 @@ int main(void) {
                                     updateSpriteCoin(&arrayBlocos[coinsId[i]]);
                                 for (i = 0; i < qntdItemBlocks; i++)
                                     updateSpriteItemBlock(&arrayBlocos[itemBlocksId[i]]);
-                                for (i = 0; i < qntdEnemies; i++) {
+                                for (i = 0; i < qntdEnemies && !mario.dead; i++) {
                                     updateSpriteEnemy(&arrayBlocos[enemiesId[i]]);
                                     if (arrayBlocos[enemiesId[i]].s.pos.x <= 0 || arrayBlocos[enemiesId[i]].s.pos.x >=
                                                                                   al_get_bitmap_width(background) -
