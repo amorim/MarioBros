@@ -1,8 +1,6 @@
 #include <allegro5/bitmap.h>
 #include <allegro5/keycodes.h>
 
-#define tempoMaxVoltaNoTempo 10
-
 typedef struct {
     int x, y;
 } posi;
