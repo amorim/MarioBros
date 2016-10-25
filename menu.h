@@ -1,15 +1,3 @@
-#define URI_TelaInicial "/home/daniel/resources/Sprites/Misc/Logo.png"
-#define URI_TelaPause "/home/daniel/resources/Sprites/Misc/TelaPause.png"
-#define URI_TelaInicialPressStart "/home/daniel/resources/Sprites/Misc/Press Enter.png"
-#define URI_TelaSelecaoLevel "/home/daniel/resources/Sprites/Misc/Mapa/Mapa.png"
-#define URI_TelaSelecaoLevelStatus1 "/home/daniel/resources/Sprites/Misc/Mapa/Mapa-base-Disponivel.png"
-#define URI_TelaSelecaoLevelStatus2 "/home/daniel/resources/Sprites/Misc/Mapa/Mapa-base-Passado.png"
-#define URI_MarioSelecaolevel "/home/daniel/resources/Sprites/Misc/Mapa/Mapa-Mario.png"
-#define URI_TelaInicialCursor "/home/daniel/resources/Sprites/Misc/Items/cogumelo.png"
-
-#define URI_MapaArvoreCoords "/home/daniel/resources/Sprites/Misc/Mapa/arvore coords.txt"
-#define URI_MapaLevelsLiberados "/home/daniel/resources/Sprites/Misc/Mapa/levelPassados.txt"
-
 struct arvore{
     int id, coordX, coordY, filhoEsq, filhoDir, status;
 } arvoreLevels[9];
