@@ -1,0 +1,8 @@
+//
+// Created by daniel on 23/10/16.
+//
+
+#ifndef DETECCAOCOLISAO_RANKING_H
+#define DETECCAOCOLISAO_RANKING_H
+
+#endif //DETECCAOCOLISAO_RANKING_H
