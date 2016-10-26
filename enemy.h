@@ -28,6 +28,7 @@ void newEnemy(Bloco* s, posi pos, int* id, int enemiesId[], int* qntdEnemies, in
     s->remainingDeadFrameCount = -1;
     s->s.baseY = ALTURA_TELA - CHAO - s->s.h;
     s->raise = true;
+    s->falling = false;
     enemiesId[(*qntdEnemies)++] = (*id)++;
 }
 void updateSpriteEnemy(Bloco* c) {
@@ -42,6 +43,15 @@ void updateSpriteEnemy(Bloco* c) {
             }
             return;
         }
+    }
+
+    if (!c->falling && verificaBuraco(c->s)) {
+        c->s.baseY = ALTURA_TELA + 100;
+        c->falling = true;
+        return;
+    }
+    if (c->s.pos.y > ALTURA_TELA - CHAO + c->s.h + 50) {
+        c->destroyed = true;
     }
     if (c->s.pos.y < c->s.baseY) {
         c->s.pos.y+=8;
@@ -85,7 +95,7 @@ bool handleEnemyCollision(Bloco* obj1, Bloco* bloco, int idBlock) {
         else
             obj1->factor *= -1;
     }
-    if (idBlock == obj1->s.ground && obj1->s.baseY != ALTURA_TELA - CHAO - obj1->s.h &&  (obj1->s.pos.x - obj1->s.bound.x > bloco->s.pos.x + bloco->s.bound.x || obj1->s.pos.x + obj1->s.bound.x < bloco->s.pos.x - bloco->s.bound.x)) {
+    if (!obj1->falling && idBlock == obj1->s.ground && obj1->s.baseY != ALTURA_TELA - CHAO - obj1->s.h &&  (obj1->s.pos.x - obj1->s.bound.x > bloco->s.pos.x + bloco->s.bound.x || obj1->s.pos.x + obj1->s.bound.x < bloco->s.pos.x - bloco->s.bound.x)) {
         obj1->s.baseY = ALTURA_TELA - CHAO - obj1->s.h;
     }
     return colidiu;

@@ -80,9 +80,9 @@ int main(void) {
     formaArvore();
     atualizaLevelStatus(&mariozinho);
 
-    font = al_load_ttf_font(URI_Font, 32, 0);
-    fontNewRankTitulo = al_load_ttf_font(URI_FontNewRankTitulo, 57, 0);
-    fontNewRankNick = al_load_ttf_font(URI_FontNewRankNick, 42, 0);
+    font = al_load_ttf_font(URI_FONT, 32, 0);
+    fontNewRankTitulo = al_load_ttf_font(URI_FONT, 57, 0);
+    fontNewRankNick = al_load_ttf_font(URI_FONT, 42, 0);
     int tempx = 50, tempy = ALTURA_TELA - 46;
     alturaPulo = chao;
     inicializaAudios();
@@ -98,7 +98,7 @@ int main(void) {
             telaGameOver();
             carregaRanking();
             if (pontuacaoAtual >= rank[99].pontos)
-                telaNewRank(coinCount + pontuacaoAtual, &fontNewRankTitulo, &fontNewRankNick, &fundoRanking, &fila_eventos, &sair);
+                telaNewRank(pontuacaoAtual, &fontNewRankTitulo, &fontNewRankNick, &fundoRanking, &fila_eventos, &sair);
             gameState = MENU_PRINCIPAL;
         }
         if(gameState == MENU_PRINCIPAL) {
@@ -118,12 +118,16 @@ int main(void) {
             if(gameState == REINICIA_FASE || gameState == IN_GAME) {
                 //region bloco/funcao reseta estados
                 mario.vel.x = 0, mario.vel.y = 0, mario.pos.x = 0, mario.pos.y = ALTURA_TELA - mario.h;
+                al_destroy_bitmap(mario.img);
                 mario.img = al_load_bitmap(URI_MARIO);
                 mario.frameTempo = 0;
                 mario.curFrame = 1;
                 mario.dead = false;
+                chaoGlobal = 60;
                 chao = chaoGlobal;
                 alturaPulo = chao;
+                coinCount = 0;
+                coinDisplay = 0;
                 voltandoNoTempo = false; didJustReleaseShift = false;
                 voltaCompletaTempo = 0;
                 pular = false;
@@ -139,13 +143,13 @@ int main(void) {
                 frameDelay = 6;
                 pontuacaoAtual = 0;
                 timerNow = 500; updateGameTimer = 0;
-                for(i = 0; i < qntdAtualBlocos; i++)
-                    arrayBlocos[i].destroyed = false;
-                for(i = 0; i < qntdCoins; i++)
-                    coinsId[i] = 0;
                 qntdItemBlocks = 0;
                 qntdCoins = 0;
                 qntdEnemies = 0;
+                for(i = 0; i < qntdAtualBlocos; i++) {
+                    al_destroy_bitmap(arrayBlocos[i].s.img);
+                    arrayBlocos[i] = BlocoNulo;
+                }
                 qntdAtualBlocos = 0;
                 //acumulador = 80;
                 //resetaCamera(&camera, cameraPosition);g
@@ -219,14 +223,15 @@ int main(void) {
                             }
                             break;
                         case ALLEGRO_EVENT_TIMER:
-                            if (!mariodead && ++updateGameTimer == FPS / 2) {
+                            if (++updateGameTimer == FPS / 2 && !win && !mariodead) {
                                 updateGameTimer = 0;
                                 timerNow--;
                                 handleTimer(timerNow, &mario, &deathRise);
                             }
                             if (updateGameTimer % 5 == 0)
-                            updateCoins();
+                                updateCoins();
                             if (mario.dead) {
+                                curFrame = 0;
                                 mariodead = true;
                                 if (deathRise) {
                                     alturaPulo += gravidade;
@@ -275,13 +280,14 @@ int main(void) {
                                     if (alturaPulo < CHAO - 10) {
                                         mario.dead = true;
                                         deathRise = true;
+                                        chaoGlobal = CHAO;
                                         mario.img = al_load_bitmap(URI_MARIO_DEAD);
                                         curFrame = 0;
                                         paraBgMusic();
                                         playDeathSound();
                                     }
-                                    if (alturaPulo <= chao) {
-                                        alturaPulo = chao;
+                                    if (alturaPulo <= chaoGlobal) {
+                                        alturaPulo = chaoGlobal;
                                         cair = false;
                                     }
                                 } else if (pular) {
@@ -294,10 +300,12 @@ int main(void) {
                                 }
                                 //endregion
                                 //region Movimenta o Mario em X
+                                if (!win || coinCount == coinDisplay)
                                 mario.pos.x += mario.vel.x;
                                 if (verificaBuraco(mario)) {
                                     if (!pular) {
                                         chaoGlobal = -50;
+                                        cair = true;
                                     }
                                 }
                                 else {
@@ -376,7 +384,13 @@ int main(void) {
                     }
                     else if (mario.pos.x >= 199 * 40 - mario.w){
                         win = true;
+                        coinCount = 0;
+                        if (coinDisplay == 0)
                         mario.pos.x += 2;
+                        else {
+                            curFrame = 0;
+                            stop_next_frame_update = true;
+                        }
                     }
                     if (!voltandoNoTempo) {
                         mario.posPassadas[mario.frameTempo] = (posi) {mario.pos.x, alturaPulo};

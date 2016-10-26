@@ -17,10 +17,11 @@ typedef struct {
 } Sprite;
 typedef struct {
     Sprite s;
-    bool destroyed, collected, raise;
+    bool destroyed, collected, raise, falling;
     int type, factor, remainingDeadFrameCount, yOnRaiseStart, content;
 } Bloco;
-Bloco arrayBlocos[1000];
+Bloco arrayBlocos[5000];
+static const Bloco BlocoNulo;
 #include "brick.h"
 #include "coin.h"
 #include "enemy.h"

@@ -23,7 +23,7 @@ void fase1(){
             newItemBlock(&arrayBlocos[qntdAtualBlocos], (posi){acumulador, ALTURA_TELA-200}, &qntdAtualBlocos, itemBlocksId, &qntdItemBlocks);
             acumulador+=160;
         }
- 
+
         if(i == 8 || i == 26){
             newBrick(&arrayBlocos[qntdAtualBlocos++], (posi){acumulador, ALTURA_TELA-chao-40}, BRICK);
             acumulador+=40;
@@ -69,7 +69,7 @@ void fase1(){
         acumulador+=40;
     }
 }
- 
+
 void fase2(){
     int i, acumulador = 180;
     for(i = 0; i<200; i++){
@@ -95,7 +95,7 @@ void fase2(){
             newItemBlock(&arrayBlocos[qntdAtualBlocos], (posi){acumulador, ALTURA_TELA-200}, &qntdAtualBlocos, itemBlocksId, &qntdItemBlocks);
             acumulador+=160;
         }
- 
+
         if(i == 8 || i == 23 || i == 100 || i == 141){
             if(i == 8)
                 acumulador += 80;
@@ -110,7 +110,7 @@ void fase2(){
             newCoin(&arrayBlocos[qntdAtualBlocos], (posi){acumulador, ALTURA_TELA-chao-160}, &qntdAtualBlocos, coinsId, &qntdCoins);
             acumulador +=100;
         }
- 
+
         if(i == 28 || i == 178){
             newBrick(&arrayBlocos[qntdAtualBlocos++], (posi){acumulador, ALTURA_TELA-chao-40}, BRICK);
             acumulador+=40;
@@ -161,7 +161,7 @@ void fase2(){
         acumulador+=40;
     }
 }
- 
+
 void fase3(){
     int i, acumulador = 300;
     for(i = 0; i < 180; i++){
@@ -187,7 +187,7 @@ void fase3(){
             newItemBlock(&arrayBlocos[qntdAtualBlocos], (posi){acumulador, ALTURA_TELA-200}, &qntdAtualBlocos, itemBlocksId, &qntdItemBlocks);
             acumulador+=40;
         }
- 
+
         if(i == 8 || i == 16 || i == 24 || i == 199){
             newBrick(&arrayBlocos[qntdAtualBlocos++], (posi){acumulador, ALTURA_TELA-chao-40}, BRICK);
             acumulador+=40;
@@ -200,7 +200,7 @@ void fase3(){
             newCoin(&arrayBlocos[qntdAtualBlocos], (posi){acumulador, ALTURA_TELA-chao-160}, &qntdAtualBlocos, coinsId, &qntdCoins);
             acumulador +=100;
         }
- 
+
         if(i == 30){
             acumulador += 500;
             newBrick(&arrayBlocos[qntdAtualBlocos++], (posi){acumulador, ALTURA_TELA-chao-40}, BRICK);
@@ -266,7 +266,7 @@ void fase3(){
         acumulador+=35;
     }
 }
- 
+
 void fase4(){
     int i, acumulador = 340;
     for(i = 0; i<200; i++){
@@ -292,7 +292,7 @@ void fase4(){
             newItemBlock(&arrayBlocos[qntdAtualBlocos], (posi){acumulador, ALTURA_TELA-200}, &qntdAtualBlocos, itemBlocksId, &qntdItemBlocks);
             acumulador+=40;
         }
- 
+
         if(i == 152 || i == 171){
             newBrick(&arrayBlocos[qntdAtualBlocos++], (posi){acumulador, ALTURA_TELA-chao-40}, BRICK);
             acumulador+=40;
@@ -305,7 +305,7 @@ void fase4(){
             newCoin(&arrayBlocos[qntdAtualBlocos], (posi){acumulador, ALTURA_TELA-chao-160}, &qntdAtualBlocos, coinsId, &qntdCoins);
             acumulador +=100;
         }
- 
+
         if(i == 0 || i == 199){
             newBrick(&arrayBlocos[qntdAtualBlocos++], (posi){acumulador, ALTURA_TELA-chao-40}, BRICK);
             acumulador+=40;
@@ -369,7 +369,7 @@ void fase4(){
         acumulador+=30;
     }
 }
- 
+
 void fase5(){
     int i, acumulador = 1200;
     for(i = 0; i<200; i++){
@@ -482,7 +482,7 @@ void fase5(){
 }
 
 
-    
+
 void fase6(){
     int i, acumulador = 100;
     for(i = 0; i<100; i++){
@@ -541,7 +541,7 @@ void fase7(){
             newItemBlock(&arrayBlocos[qntdAtualBlocos], (posi){acumulador, ALTURA_TELA-400}, &qntdAtualBlocos, itemBlocksId, &qntdItemBlocks);
             acumulador+=300;
         }
- 
+
         if(i == 0 || i == 200 || i % 33 == 0){
             newBrick(&arrayBlocos[qntdAtualBlocos++], (posi){acumulador, ALTURA_TELA-chao-40}, BRICK);
             acumulador+=40;
@@ -554,7 +554,7 @@ void fase7(){
             newCoin(&arrayBlocos[qntdAtualBlocos], (posi){acumulador, ALTURA_TELA-chao-160}, &qntdAtualBlocos, coinsId, &qntdCoins);
             acumulador +=100;
         }
- 
+
         if(i == 10 || i == 100 || i == 145){
             newBrick(&arrayBlocos[qntdAtualBlocos++], (posi){acumulador, ALTURA_TELA-chao-40}, BRICK);
             acumulador+=40;
@@ -628,7 +628,7 @@ void fase7(){
         acumulador+=20;
     }
 }
- 
+
 void fase8(){
     int i, acumulador = 40;
     for(i = 0; i < 180; i++){
@@ -654,7 +654,7 @@ void fase8(){
             newItemBlock(&arrayBlocos[qntdAtualBlocos], (posi){acumulador, ALTURA_TELA-400}, &qntdAtualBlocos, itemBlocksId, &qntdItemBlocks);
             acumulador+=300;
         }
- 
+
         if(i == 200 || i % 33 == 0){
             newBrick(&arrayBlocos[qntdAtualBlocos++], (posi){acumulador, ALTURA_TELA-chao-40}, BRICK);
             acumulador+=40;
@@ -741,7 +741,7 @@ void fase8(){
         acumulador += 50;
     }
 }
- 
+
 void fase9(){
     int i, acumulador = 340;
     for(i = 0; i<200; i++){
@@ -767,7 +767,7 @@ void fase9(){
             newItemBlock(&arrayBlocos[qntdAtualBlocos], (posi){acumulador, ALTURA_TELA-200}, &qntdAtualBlocos, itemBlocksId, &qntdItemBlocks);
             acumulador+=40;
         }
- 
+
         if(i == 152 || i == 171){
             newBrick(&arrayBlocos[qntdAtualBlocos++], (posi){acumulador, ALTURA_TELA-chao-40}, BRICK);
             acumulador+=40;
@@ -780,7 +780,7 @@ void fase9(){
             newCoin(&arrayBlocos[qntdAtualBlocos], (posi){acumulador, ALTURA_TELA-chao-160}, &qntdAtualBlocos, coinsId, &qntdCoins);
             acumulador +=100;
         }
- 
+
         if(i == 0 || i == 199){
             newBrick(&arrayBlocos[qntdAtualBlocos++], (posi){acumulador, ALTURA_TELA-chao-40}, BRICK);
             acumulador+=40;

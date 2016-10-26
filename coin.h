@@ -38,6 +38,7 @@ void updateCoins() {
     }
     else if (coinCount < coinDisplay) {
         coinDisplay--;
+        pontuacaoAtual+=100;
         somCollectCoin();
     }
 }
