@@ -56,3 +56,7 @@ int qntdAtualBlocos = 0;
 #define QUESTION_BLOCK 4
 #define MUSHROOM 5
 #define TENCOINS 6
+
+#define URI_Font "/home/daniel/resources/fonts/SuperMario.ttf"
+#define URI_FontNewRankTitulo "/home/daniel/resources/fonts/SuperMario.ttf"
+#define URI_FontNewRankNick "/home/daniel/resources/fonts/SuperMario.ttf"
