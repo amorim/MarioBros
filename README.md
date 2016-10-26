@@ -77,13 +77,13 @@ Na tela de seleção de nível pode ser observado que as fases variam de cor, co
 	
 Como o seletor de níveis funciona como uma árvore, a navegação dá-se pelo seguinte esquema:
 
-	• Seta para esquerda/direita: acessa os filhos direitos/esquedos do nó atual, respectivamente
+	• Seta para esquerda/direita: acessa os filhos da esquerda/direita do nó atual, respectivamente
 	• Seta para cima: acessa o pai do nó atual
 
 Ao pular sobre um goomba, o Mario mata esse goomba, porém, atenção, ao ter mais de um goomba junto, o Mario sempre irá morrer se pular sobre estes, já que ele apenas mata um por vez.
 
 A pontuação é dada pela coleta de moedas e ações como destruir um Bloco de Segredo e matar inimigos, você passa de fase assim que o Mario conseguir chegar ao final do mapa sem o tempo acabar.
 
-A volta no tempo pode ser usada quando quiser, porém ela não volta a contagem de segundos que o Mario tem para chegar ao final da fase, portanto, utilize com cautela. Se o tempo acabar, voce automaticamente perde uma vida e seu progresso na fase.
+A volta no tempo pode ser usada quando quiser, porém ela não volta a contagem de segundos que o Mario tem para chegar ao final da fase, portanto, utilize com cautela. Se o tempo acabar, você automaticamente perde uma vida e seu progresso na fase.
 
 Para entrar no ranking, é necessário levar um game over e sua pontuação estar entre o TOP 100.
