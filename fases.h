@@ -511,8 +511,6 @@ void fase6(){
         acumulador+=100;
     }
 }
-
- 
 void fase7(){
     int i, acumulador = 300;
     for(i = 0; i<200; i++){
