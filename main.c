@@ -80,9 +80,9 @@ int main(void) {
     formaArvore();
     atualizaLevelStatus(&mariozinho);
 
-    font = al_load_ttf_font("/home/daniel/resources/fonts/SuperMario.ttf", 32, 0);
-    fontNewRankTitulo = al_load_ttf_font("/home/daniel/resources/fonts/SuperMario.ttf", 57, 0);
-    fontNewRankNick = al_load_ttf_font("/home/daniel/resources/fonts/SuperMario.ttf", 42, 0);
+    font = al_load_ttf_font(URI_Font, 32, 0);
+    fontNewRankTitulo = al_load_ttf_font(URI_FontNewRankTitulo, 57, 0);
+    fontNewRankNick = al_load_ttf_font(URI_FontNewRankNick, 42, 0);
     int tempx = 50, tempy = ALTURA_TELA - 46;
     alturaPulo = chao;
     inicializaAudios();
