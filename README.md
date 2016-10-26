@@ -69,6 +69,15 @@ O jogo utiliza uma pasta de recursos necessários, contendo todos os itens de jo
 		↑: (seta para cima) usada para fazer o Mario dar pulos;
 		Shift: usada para fazer o Mario voltar no tempo.
 
+Na tela de seleção de nível pode ser observado que as fases variam de cor, confome mostrado:
+	• Cinza: Fase ainda não liberada
+	• Azul: Fase liberada, mas ainda não terminada
+	• Amarelo: Fase terminada
+	
+Como o seletor de níveis funciona como uma árvore, a navegação dá-se pelo seguinte esquema:
+	• Seta para esquerda/direita: acessa os filhos direitos/esquedos do nó atual, respectivamente
+	• Seta para cima: acessa o pai do nó atual
+
 Ao pular sobre um goomba, o Mario mata esse goomba, porém, atenção, ao ter mais de um goomba junto, o Mario sempre irá morrer se pular sobre estes, já que ele apenas mata um por vez.
 
 A pontuação é dada pela coleta de moedas e ações como destruir um Bloco de Segredo e matar inimigos, você passa de fase assim que o Mario conseguir chegar ao final do mapa sem o tempo acabar.
