@@ -70,11 +70,13 @@ O jogo utiliza uma pasta de recursos necessários, contendo todos os itens de jo
 		Shift: usada para fazer o Mario voltar no tempo.
 
 Na tela de seleção de nível pode ser observado que as fases variam de cor, confome mostrado:
+
 	• Cinza: Fase ainda não liberada
 	• Azul: Fase liberada, mas ainda não terminada
 	• Amarelo: Fase terminada
 	
 Como o seletor de níveis funciona como uma árvore, a navegação dá-se pelo seguinte esquema:
+
 	• Seta para esquerda/direita: acessa os filhos direitos/esquedos do nó atual, respectivamente
 	• Seta para cima: acessa o pai do nó atual
 
