@@ -58,10 +58,8 @@ No MacOS, basta utilizar a aplicação "homebrew", conforme esse tutorial:
 E seguir os mesmos passos que foram utilizados no linux, compilando via Cmake.
 
 Pedimos que altere o CmakeLists.txt para apontar corretamente a localização das pastas include e lib do Allegro, estas pastas mudam conforme o sistema.
-
-Se possível, usar a IDE Clion para testar o jogo.
   
-O jogo utiliza uma pasta de recursos necessários, contendo todos os itens de jogo, como sons ou sprites. Devido a IDE que foi usada durante o desenvolvimento do projeto, não pudemos usar caminhos relativos. Então pedimos por favor que seja feito um Global Find-Replace em todos os arquivos do projeto para alterar as URIs para apontar corretamente à pasta de recursos em seu computador. Isso será arrumado em breve.
+O jogo utiliza uma pasta de recursos necessários, contendo todos os itens de jogo, como sons ou sprites. Essa pasta encontra-se na pasta debug aqui do repositório. Mantenha-a junto ao binário para que o jogo seja executado corretamente.
 
  JOGANDO:
 
